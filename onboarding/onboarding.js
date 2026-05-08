@@ -54,7 +54,7 @@ export default {
     // ── PREFACE ──────────────────────────────────────────────────────────────
     {
       type: 'preface',
-      title: 'Preface',
+      heading: 'Preface',
       body: `<p>In my career, I have not just observed the engineering and manufacturing world from the sidelines — I have been in the middle of negotiating it.</p>
 
 <p>During years of joint venture discussions and facility visits with institutions like ISRO and IISc, I sat across the table from some of the most rigorous analytical minds in the country. In those settings, I saw what genuine intellectual discipline looks like when applied to a hard problem — the insistence on testing assumptions before acting on them, the refusal to confuse activity with progress, and the discipline of distinguishing between what is known and what is merely hoped.</p>
@@ -72,44 +72,35 @@ export default {
       authorTitle: 'Business Model & Strategy Advisor',
     },
 
-    // ── WHO SHOULD READ THIS BOOK ────────────────────────────────────────────
-    {
+    // ── WHO SHOULD READ THIS BOOK ────────────────────────────────────────────    {
       type: 'who',
-      title: 'Who Should Read This Book',
-      intro: 'This book is the third in the Manufacturing Strategy Series. It is designed for a specific kind of leader at a specific kind of moment — the moment before a major capital decision is made.',
-      profiles: [
-        {
-          role: 'The Managing Director or Promoter Facing a Major Capital Decision',
-          body: 'You have identified an opportunity. The boardroom is excited. Your VP of Sales is confident, your Head of Production has quoted the machine cost, and the bank is ready to extend the credit. Before you sign the purchase order, this book will give you a rigorous methodology for distinguishing between a validated opportunity and an exciting idea. It will take approximately four hours to read. The capital it could save you will dwarf any other investment you make this year.',
-        },
-        {
-          role: 'The CFO or Finance Head of a Manufacturing Business',
-          body: 'You have been in the meetings. You have seen the optimistic spreadsheets, the spectacular projected ROIs, and the confident "this is a guaranteed market" presentations. You have also seen the machines draped in tarps three years later. This book will give you the analytical vocabulary and the specific boardroom tools to hold strategic decisions to a higher standard of evidence — without being the person who simply says no to every new idea.',
-        },
-        {
-          role: 'The CA, Lawyer, or Financial Advisor to Manufacturing Businesses',
-          body: 'You advise clients who make capital allocation decisions. You see their balance sheets before and after these decisions are made. You have watched businesses take on significant debt to finance machines, factory wings, and new capabilities — and you have watched those decisions compress margins and constrain cash flow for years. This book will give you a framework for the conversation with your client that happens before the loan is signed.',
-        },
-        {
-          role: 'The Independent Director or Board Member of a Manufacturing Company',
-          body: 'Capital allocation proposals come to you with polished presentations, detailed financial projections, and confident management teams. Your fiduciary responsibility is to ask the questions the management team may not have asked themselves. The WWHTBT framework, the Deal Killer isolation, and the Three Pillars of Capital Readiness in this book are the questions a board should ask before approving any major strategic capital expenditure.',
-        },
-        {
-          role: 'The Executive Director or Senior Leader Inside a Manufacturing Business',
-          body: 'You sit in the strategy meetings. You hear the ideas. You watch the decisions being made. You may have a sense that something is being skipped — that the step between "this sounds like a good idea" and "let us buy the machine" is missing a rigorous middle stage. This book names that middle stage and gives you the tools to introduce it into your company\'s decision-making process.',
-        },
-        {
-          role: 'Who This Book Is Not For',
-          body: 'This book is not for businesses that are still in the survival stage — where the urgent task is generating enough cash flow to meet payroll, not validating strategic assumptions before capital deployment. It is also not for those who are already committed. If you have signed the bank loan, bought the machine, and the equipment is arriving next week, this book will not help you with that decision. It will, however, help you design the next one correctly.',
-        },
-      ],
+      heading: 'Who Should Read This Book',
+      body: `<p>This book is the third in the Manufacturing Strategy Series. It is designed for a specific kind of leader at a specific kind of moment — the moment before a major capital decision is made.</p>
+
+<p><strong>The Managing Director or Promoter Facing a Major Capital Decision</strong></p>
+<p>You have identified an opportunity. The boardroom is excited. Your VP of Sales is confident, your Head of Production has quoted the machine cost, and the bank is ready to extend the credit. Before you sign the purchase order, this book will give you a rigorous methodology for distinguishing between a validated opportunity and an exciting idea. It will take approximately four hours to read. The capital it could save you will dwarf any other investment you make this year.</p>
+
+<p><strong>The CFO or Finance Head of a Manufacturing Business</strong></p>
+<p>You have been in the meetings. You have seen the optimistic spreadsheets, the spectacular projected ROIs, and the confident "this is a guaranteed market" presentations. You have also seen the machines draped in tarps three years later. This book will give you the analytical vocabulary and the specific boardroom tools to hold strategic decisions to a higher standard of evidence — without being the person who simply says no to every new idea.</p>
+
+<p><strong>The CA, Lawyer, or Financial Advisor to Manufacturing Businesses</strong></p>
+<p>You advise clients who make capital allocation decisions. You see their balance sheets before and after these decisions are made. You have watched businesses take on significant debt to finance machines, factory wings, and new capabilities — and you have watched those decisions compress margins and constrain cash flow for years. This book will give you a framework for the conversation with your client that happens before the loan is signed.</p>
+
+<p><strong>The Independent Director or Board Member of a Manufacturing Company</strong></p>
+<p>Capital allocation proposals come to you with polished presentations, detailed financial projections, and confident management teams. Your fiduciary responsibility is to ask the questions the management team may not have asked themselves. The WWHTBT framework, the Deal Killer isolation, and the Three Pillars of Capital Readiness in this book are the questions a board should ask before approving any major strategic capital expenditure.</p>
+
+<p><strong>The Executive Director or Senior Leader Inside a Manufacturing Business</strong></p>
+<p>You sit in the strategy meetings. You hear the ideas. You watch the decisions being made. You may have a sense that something is being skipped — that the step between "this sounds like a good idea" and "let us buy the machine" is missing a rigorous middle stage. This book names that middle stage and gives you the tools to introduce it into your company's decision-making process.</p>
+
+<p><strong>Who This Book Is Not For</strong></p>
+<p>This book is not for businesses that are still in the survival stage — where the urgent task is generating enough cash flow to meet payroll, not validating strategic assumptions before capital deployment. It is also not for those who are already committed. If you have signed the bank loan, bought the machine, and the equipment is arriving next week, this book will not help you with that decision. It will, however, help you design the next one correctly.</p>`,
     },
 
     // ── INTRODUCTION SCREEN 1: THE COSTLY DECISION TRAP ──────────────────────
     {
       type: 'intro',
       label: 'Introduction',
-      title: 'The Costly Decision Trap',
+      heading: 'The Costly Decision Trap',
       body: `<p>Walk onto the shop floor of almost any mid-sized manufacturing company that has been operating for more than a decade, and if you look closely enough, you will find it. Usually it is sitting in the back corner of the facility, pushed up against a wall, draped in a dusty plastic tarp, or quietly being used as an incredibly expensive table to store empty cardboard boxes. It is the physical monument to a failed strategic bet.</p>
 
 <p>Perhaps it is a specialised Rs. 3 Crore multi-axis tube laser. Perhaps it is an automated powder-coating line. Or maybe it is an entire climate-controlled cleanroom that has not seen a human being in eighteen months. Whenever I see one of these silent, idle monuments on a factory floor, I ask the founder the exact same question: what is the story behind that machine?</p>
@@ -125,7 +116,7 @@ export default {
     {
       type: 'intro',
       label: 'Introduction',
-      title: 'The Illusion of the Bold Leap',
+      heading: 'The Illusion of the Bold Leap',
       body: `<p>There is a toxic myth in the business world, perpetuated by magazines, motivational speakers, and startup culture. It is the myth of the Bold Leap. We are taught that great entrepreneurs are gamblers. We are told that to achieve massive growth, a founder must trust their gut, burn the boats, and push all their chips into the centre of the table.</p>
 
 <p>In the software industry, betting the business is relatively cheap. If a software company builds a bad app, they lose a few months of programmer salaries. They can rewrite the code over the weekend and try again. But in the heavy industrial manufacturing sector, betting the business requires concrete, steel, high-voltage electricity, and multi-million-rupee capital expenditure. When a manufacturer makes a bad bet, they cannot just pivot over the weekend. They are stuck with three tons of useless iron bolted to their factory floor.</p>
@@ -137,7 +128,7 @@ export default {
     {
       type: 'intro',
       label: 'Introduction',
-      title: 'From Evidence to Prospective Data',
+      heading: 'From Evidence to Prospective Data',
       body: `<p>When a leadership team debates a new strategic direction — like shifting from commercial components to aerospace — the accountants and engineers in the room will naturally demand evidence that the market exists. But demanding evidence is a linguistic trap. Evidence, by definition, is a record of the past. If you are launching a completely new strategic advantage that your company has never offered before, there is no past evidence to look at.</p>
 
 <p>If you wait until an opportunity is so heavily documented and proven that it is generating historical evidence, the market is already saturated. You are too late. You cannot use past evidence to prove a future strategy.</p>
