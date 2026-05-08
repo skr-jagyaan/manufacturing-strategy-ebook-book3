@@ -280,7 +280,7 @@ async function loadOnboarding(startScreen = 0) {
 }
 
 // ── BACKMATTER LOADER ──
-async function loadBackmatter() {
+async function loadBackmatter(startScreen = 0) {
   showLoader();
   try {
     const module = await import('/chapters/backmatter.js?v=3');
@@ -294,6 +294,15 @@ async function loadBackmatter() {
     buildScreens(currentChapter.screens);
     totalScreens = currentChapter.screens.length;
     currentScreen = 0;
+    if (startScreen > 0 && startScreen < totalScreens) {
+      for (let i = 0; i < startScreen; i++) {
+        const el = document.getElementById('sc-' + i);
+        if (el) { el.classList.remove('active'); el.classList.add('done'); }
+      }
+      const target = document.getElementById('sc-' + startScreen);
+      if (target) target.classList.add('active');
+      currentScreen = startScreen;
+    }
 
     buildDots();
     hideLoader();
@@ -694,7 +703,7 @@ function renderScreen(screen, idx, total) {
         <div class="screen-footer">
           <span></span>
           <span class="screen-ctr">${idx + 1} of ${total}</span>
-          <button class="btn btn-primary" id="diag-next-btn" style="display:none" onclick="go(${idx}, ${idx + 1})">Continue →</button>
+          <button class="btn btn-primary" id="diag-next-btn" style="display:none" onclick="loadBackmatter(6)">Continue →</button>
         </div>`;
 
     case 'working-with-author':
@@ -1357,6 +1366,7 @@ document.addEventListener('touchend', e => {
 window.go                  = go;
 window.goToChapter         = goToChapter;
 window.goToBackmatter      = goToBackmatter;
+window.loadBackmatter       = loadBackmatter;
 window.goToDiagnosis       = goToDiagnosis;
 window.submitForm          = submitForm;
 window.submitTakeaways     = submitTakeaways;
