@@ -1,117 +1,198 @@
 export default {
-  chapterNum:   null,
-  chapterTitle: 'Onboarding',
-  partName:     '',
-  barTitle:     'Stop Planning, Start Winning',
-
   screens: [
-    // 0 — Cover
+
+    // ── COVER ────────────────────────────────────────────────────────────────
     {
-      type:     'cover',
-      series:   'The Manufacturing Strategy Series · Book Two',
-      title:    'Stop Planning,\nStart Winning',
-      subtitle: 'Making Strategic Choices Competitors Can\'t Copy',
-      author:   'Sudharsan K R'
+      type: 'cover',
+      seriesLabel: 'The Manufacturing Strategy Series',
+      bookNumber: 'Book Three',
+      title: "Don't Bet the Business",
+      subtitle: 'How Manufacturing Companies Validate Strategic Assumptions Before Committing Capital',
+      author: 'Sudharsan K R',
     },
 
-    // 1 — Copyright
+    // ── COPYRIGHT ────────────────────────────────────────────────────────────
     {
       type: 'copyright',
-      body: `<p>Copyright © 2026 by Sudharsan K R</p>
-<p>All rights reserved. No part of this publication may be reproduced, distributed, or transmitted in any form or by any means — including photocopying, recording, or other electronic or mechanical methods — without the prior written permission of the author, except in the case of brief quotations embodied in critical reviews and certain other non-commercial uses permitted by copyright law.</p>
-<p>The case studies and scenarios featured in these pages are composite accounts based on real-world consulting experiences. Specific names, locations, and identifying business metrics have been altered to protect client confidentiality. This publication is sold with the understanding that the author is not engaged in rendering legal, accounting, or other professional compliance services.</p>
-<p>Published in India.</p>`
+      seriesLine: 'The Manufacturing Strategy Series',
+      bookList: [
+        'Book One — Why Great Manufacturers Stay Invisible',
+        'Book Two — Stop Planning, Start Winning',
+        'Book Three — Don\'t Bet the Business',
+        'Book Four — Decoding the Rs. 100 Cr Breakthrough',
+      ],
+      copyrightLine: 'Copyright © 2026 by Sudharsan K R',
+      rights: 'All rights reserved. No part of this publication may be reproduced, distributed, or transmitted in any form or by any means — including photocopying, recording, or other electronic or mechanical methods — without the prior written permission of the author, except in the case of brief quotations embodied in critical reviews and certain other non-commercial uses permitted by copyright law.',
+      disclaimer: 'The case studies and scenarios featured in these pages are composite accounts based on real-world consulting experiences. Specific names, locations, and identifying business metrics have been altered to protect client confidentiality. This publication is sold with the understanding that the author is not engaged in rendering legal, accounting, or other professional compliance services.',
+      publishedLine: 'Published in India.',
     },
 
-    // 2 — Table of Contents
+    // ── TABLE OF CONTENTS ────────────────────────────────────────────────────
     {
-      type:  'toc',
+      type: 'toc',
       items: [
-        { label: 'Introduction', title: 'Why Most Strategy Meetings Go Nowhere' },
-        { label: 'Part One',     title: 'The Planning Trap',                    isSection: true },
-        { label: 'Chapter 1',   title: 'The Strategy Illusion' },
-        { label: 'Chapter 2',   title: 'The Laudable List Problem' },
-        { label: 'Part Two',    title: 'The Two Strategic Choices',             isSection: true },
-        { label: 'Chapter 3',   title: 'Where Could We Play?' },
-        { label: 'Chapter 4',   title: 'How Could We Win There?' },
-        { label: 'Chapter 5',   title: 'The Fit Between Opportunity and Advantage' },
-        { label: 'Part Three',  title: 'Designing Advantage',                  isSection: true },
-        { label: 'Chapter 6',   title: 'Where Advantage Actually Comes From' },
-        { label: 'Chapter 7',   title: 'The Power of Trade-Offs' },
-        { label: 'Part Four',   title: 'Strategy as an Integrated System',     isSection: true },
-        { label: 'Chapter 8',   title: 'Strategy Is a System of Choices' },
-        { label: 'Chapter 9',   title: 'Why Most Strategies Collapse' },
-        { label: 'Conclusion',  title: 'Turning Strategic Ideas Into Testable Logic' },
-      ]
+        { label: 'Preface', indent: 0 },
+        { label: 'Who Should Read This Book', indent: 0 },
+        { label: 'Introduction: The Costly Decision Trap', indent: 0 },
+        { label: 'Part One: Why Big Strategic Bets Go Wrong', indent: 0, isPartHead: true },
+        { label: 'Chapter 1: The Gut Feeling Decision', indent: 1 },
+        { label: 'Chapter 2: The Capital Trap', indent: 1 },
+        { label: 'Part Two: Turning Strategy Into Testable Logic', indent: 0, isPartHead: true },
+        { label: 'Chapter 3: What Would Have to Be True?', indent: 1 },
+        { label: 'Chapter 4: Identifying the Deal Killers', indent: 1 },
+        { label: 'Part Three: Thin-Slicing Experiments', indent: 0, isPartHead: true },
+        { label: 'Chapter 5: The Logic of Thin-Slicing', indent: 1 },
+        { label: 'Chapter 6: Simple Market Experiments', indent: 1 },
+        { label: 'Chapter 7: The Fake Door Test', indent: 1 },
+        { label: 'Part Four: Making Decisions With Confidence', indent: 0, isPartHead: true },
+        { label: 'Chapter 8: Learning From Experiments', indent: 1 },
+        { label: 'Chapter 9: When to Commit Capital', indent: 1 },
+        { label: 'Chapter 10: Building a Strategic Learning Habit', indent: 1 },
+      ],
     },
 
-    // 3 — Preface
+    // ── PREFACE ──────────────────────────────────────────────────────────────
     {
-      type:    'preface',
-      heading: 'Preface',
-      body:    `<p>In my career, I have not just observed the engineering and manufacturing world from the sidelines — I have been in the middle of negotiating it.</p>
-<p>During years of joint venture discussions and facility visits with institutions like ISRO and IISc, I sat across the table from some of the most rigorous analytical minds in the country. In those settings, I saw what genuine intellectual discipline looks like when applied to a hard problem — the insistence on testing assumptions before acting on them, the refusal to confuse activity with progress. I learned the rigour required to translate complex, cutting-edge thinking into real-world utility.</p>
-<p>I took that same lens into the boardrooms of large industrial organisations — L&T, GMR, and others. I saw how businesses at scale structure consequential decisions. How they separate strategic choice from operational execution. How they build organisations that can make decisions independently of any single individual.</p>
-<p>And then I stepped into the boardrooms and factory floors of manufacturing businesses in the Rs. 10 to Rs. 50 Crore band across Pune, Coimbatore, Ahmedabad, Ludhiana, Rajkot, and the industrial estates surrounding them. What I consistently observed was this: these businesses were not failing because of poor execution. They were stalling because of unexamined strategic choices — and then treating the consequences as operational problems.</p>
-<p>The clearest symptom I encountered was the annual strategy offsite — a day of genuine effort that produced a list of operational improvements and nothing that would change how the business competed in its market. Founders left that room feeling productive, holding a to-do list they called a strategy. Six months later, nothing had changed. The machine had arrived. The software was installed. The salespeople were hired. And the procurement manager still said: your quality looks good, but your price is 4% too high.</p>
-<p>That gap between effort and outcome — between planning and strategy — is the subject of this book. This is not a book about working harder. It is a book about making different choices — with the clarity and discipline that the next phase of your business actually requires.</p>`
+      type: 'preface',
+      title: 'Preface',
+      body: `<p>In my career, I have not just observed the engineering and manufacturing world from the sidelines — I have been in the middle of negotiating it.</p>
+
+<p>During years of joint venture discussions and facility visits with institutions like ISRO and IISc, I sat across the table from some of the most rigorous analytical minds in the country. In those settings, I saw what genuine intellectual discipline looks like when applied to a hard problem — the insistence on testing assumptions before acting on them, the refusal to confuse activity with progress, and the discipline of distinguishing between what is known and what is merely hoped.</p>
+
+<p>I took that same lens into the boardrooms of large industrial organisations — L&amp;T, GMR, and others. I saw how businesses at scale make high-stakes capital decisions. How they separate a validated opportunity from an exciting idea. How they build the conditions under which capital is committed, rather than committing capital and then hoping the conditions materialise.</p>
+
+<p>And then I stepped into the boardrooms and factory floors of manufacturing businesses in the Rs. 10 to Rs. 50 Crore band across Pune, Coimbatore, Ahmedabad, Ludhiana, Rajkot, and the industrial estates surrounding them. The most visible symptom I consistently encountered was the idle machine — present in almost every factory I visited, draped in a tarp, representing a capital commitment made before the market had been tested.</p>
+
+<p>The story behind every idle machine was structurally identical. A leadership team had identified an opportunity, the boardroom had buzzed with excitement, the spreadsheets had shown spectacular returns, and the purchase order had been signed before a single assumption had been validated. The demand never materialised. The European buyers stopped returning emails. The defence contracts were delayed by bureaucracy. The EV market shifted its design parameters. The machine sat.</p>
+
+<p>This book is about preventing that machine from ever being purchased. It is about the discipline of testing your most dangerous strategic assumptions before committing capital — cheaply, rapidly, and with full protection of your balance sheet. It is the methodology that separates businesses that scale from businesses that survive, and it is the single most underutilised capability in the Indian manufacturing sector.</p>
+
+<p>The frameworks here — the WWHTBT logic test, the Deal Killer isolation, the Thin-Slicing methodology, the Fake Door Test — are not academic constructs. They are the diagnostic tools I use in direct engagement with founders, boards, and leadership teams facing high-stakes capital decisions. They have been built from real decisions, real machines, and real balance sheets. They are tested in the field, not the classroom.</p>`,
+      authorName: 'Sudharsan K R',
+      authorTitle: 'Business Model & Strategy Advisor',
     },
 
-    // 4 — Who Should Read This Book
+    // ── WHO SHOULD READ THIS BOOK ────────────────────────────────────────────
     {
-      type:    'who',
-      heading: 'Who Should Read This Book',
-      body:    `<p>This book is written for a specific kind of person at a specific kind of moment. Not everyone in manufacturing needs it. But for those who do, it will be the most important business book they read this year.</p>
-<p><strong>The Founder Who Has Outgrown Their Own Business.</strong> You built this business from nothing. You funded it, fought for it, and made it work through sheer force of will. You know every machine on the floor, every customer on the books, and every margin on every job. And yet, somewhere around Rs. 20 Crore or Rs. 30 Crore or Rs. 40 Crore, the business stopped responding to effort the way it used to. You are working as hard as you ever have, and the revenue is not moving. You have tried new machines. You have tried new salespeople. You have tried new systems. Something structural is wrong, and you have not yet been able to name it. This book will name it for you.</p>
-<p><strong>The Managing Director Preparing for the Next Phase.</strong> Your business is operationally sound. You have capable people, good quality systems, and a solid customer base. You are now facing the question that every well-run manufacturing business eventually confronts: what comes next? How do you move from being a reliable vendor to a recognised specialist? How do you grow profitably rather than just growing? How do you build a business that has pricing power, not just production capacity? This book answers those questions with specificity — not theory, but a practical framework for making the choices that create structural competitive advantage.</p>
-<p><strong>The CA, Lawyer, or Financial Advisor to Manufacturing Businesses.</strong> You work closely with manufacturing businesses in the Rs. 10 to Rs. 50 Crore band. You see their financials, their balance sheets, their capital allocation decisions. You have watched businesses invest in machines, hire expensive executives, and attend trade shows — and return to the same revenue plateau the following year. The answer is almost always a strategy problem, not an execution problem. This book will give you the diagnostic vocabulary to recognise it.</p>
-<p><strong>The Senior Leader Inside a Manufacturing Business.</strong> You are a Head of Sales, a CFO, a Head of Production, or a Quality Head. You sit in the strategy offsites. You contribute to the lists on the whiteboard. And you leave those meetings with a vague sense that what has been produced is not a strategy, but you are not sure how to say so. You want a common language for strategic thinking that you can bring into the room. This book is that language.</p>
-<p><strong>Who This Book Is Not For.</strong> This book is not for businesses below Rs. 10 Crore in revenue who are still in the survival stage. It is also not for those looking for a motivational framework or a set of inspirational principles. The thinking here is analytical and sometimes uncomfortable. Strategy, properly understood, requires making painful choices — about what you will stop doing, which customers you will stop serving, and which revenue you will deliberately walk away from. If you are not ready for that discomfort, this is the wrong book. If you are ready for it, turn the page.</p>`
+      type: 'who',
+      title: 'Who Should Read This Book',
+      intro: 'This book is the third in the Manufacturing Strategy Series. It is designed for a specific kind of leader at a specific kind of moment — the moment before a major capital decision is made.',
+      profiles: [
+        {
+          role: 'The Managing Director or Promoter Facing a Major Capital Decision',
+          body: 'You have identified an opportunity. The boardroom is excited. Your VP of Sales is confident, your Head of Production has quoted the machine cost, and the bank is ready to extend the credit. Before you sign the purchase order, this book will give you a rigorous methodology for distinguishing between a validated opportunity and an exciting idea. It will take approximately four hours to read. The capital it could save you will dwarf any other investment you make this year.',
+        },
+        {
+          role: 'The CFO or Finance Head of a Manufacturing Business',
+          body: 'You have been in the meetings. You have seen the optimistic spreadsheets, the spectacular projected ROIs, and the confident "this is a guaranteed market" presentations. You have also seen the machines draped in tarps three years later. This book will give you the analytical vocabulary and the specific boardroom tools to hold strategic decisions to a higher standard of evidence — without being the person who simply says no to every new idea.',
+        },
+        {
+          role: 'The CA, Lawyer, or Financial Advisor to Manufacturing Businesses',
+          body: 'You advise clients who make capital allocation decisions. You see their balance sheets before and after these decisions are made. You have watched businesses take on significant debt to finance machines, factory wings, and new capabilities — and you have watched those decisions compress margins and constrain cash flow for years. This book will give you a framework for the conversation with your client that happens before the loan is signed.',
+        },
+        {
+          role: 'The Independent Director or Board Member of a Manufacturing Company',
+          body: 'Capital allocation proposals come to you with polished presentations, detailed financial projections, and confident management teams. Your fiduciary responsibility is to ask the questions the management team may not have asked themselves. The WWHTBT framework, the Deal Killer isolation, and the Three Pillars of Capital Readiness in this book are the questions a board should ask before approving any major strategic capital expenditure.',
+        },
+        {
+          role: 'The Executive Director or Senior Leader Inside a Manufacturing Business',
+          body: 'You sit in the strategy meetings. You hear the ideas. You watch the decisions being made. You may have a sense that something is being skipped — that the step between "this sounds like a good idea" and "let us buy the machine" is missing a rigorous middle stage. This book names that middle stage and gives you the tools to introduce it into your company\'s decision-making process.',
+        },
+        {
+          role: 'Who This Book Is Not For',
+          body: 'This book is not for businesses that are still in the survival stage — where the urgent task is generating enough cash flow to meet payroll, not validating strategic assumptions before capital deployment. It is also not for those who are already committed. If you have signed the bank loan, bought the machine, and the equipment is arriving next week, this book will not help you with that decision. It will, however, help you design the next one correctly.',
+        },
+      ],
     },
 
-    // 5 — Introduction screen 1
+    // ── INTRODUCTION SCREEN 1: THE COSTLY DECISION TRAP ──────────────────────
     {
-      type:    'intro',
-      heading: 'Why Most Strategy Meetings Go Nowhere',
-      body:    `<p>Picture a scene that takes place in thousands of manufacturing businesses every single year. It is a Saturday morning in late March. The leadership team of a mid-sized manufacturing company — the Managing Director, the Head of Production, the VP of Sales, the Quality Manager, and the CFO — have gathered in a hotel conference room for their annual Strategy Offsite. The business has been stuck at the same revenue plateau for three years. Margins are shrinking, procurement buyers are demanding deeper discounts, and aggressive new competitors are entering the market. Everyone in the room knows that things need to change.</p>
-<p>The Managing Director stands at the front of the room, uncaps a marker, and writes the word STRATEGY in big, bold letters on the whiteboard. For the next four hours, the room buzzes with intense, passionate energy. The Production Head argues that they need to invest in new high-speed automated machinery to reduce cycle times. The Quality Manager insists they need to implement digital inspection software. The VP of Sales demands a larger travel budget, a new CRM system, and approval to hire three new field executives to push into export markets.</p>
-<p>By lunchtime, the whiteboard is entirely filled with bullet points. The Managing Director takes a photo of the whiteboard. The team goes downstairs to the hotel buffet, patting each other on the back. They feel aligned. They feel productive. They leave the offsite feeling like they have a powerful new strategy to dominate the market.</p>
-<p>Six months later, they are sitting in the exact same boardroom, looking at the exact same flatlined revenue numbers. The new machines are installed and running beautifully. The quality software is active. The new salespeople are making fifty calls a day. Yet the business is still fighting for scraps. When the sales team pitches a new corporate buyer, the buyer still flips to the back of the quotation and says: "Your quality looks good, but your price is 4% too high. Match the lowest bidder, or we walk."</p>
-<p>Despite executing almost everything on the whiteboard flawlessly, the company's competitive position in the market has not changed one bit. Why? Because that leadership team did not actually create a strategy in that hotel room. They created a to-do list.</p>`
+      type: 'intro',
+      label: 'Introduction',
+      title: 'The Costly Decision Trap',
+      body: `<p>Walk onto the shop floor of almost any mid-sized manufacturing company that has been operating for more than a decade, and if you look closely enough, you will find it. Usually it is sitting in the back corner of the facility, pushed up against a wall, draped in a dusty plastic tarp, or quietly being used as an incredibly expensive table to store empty cardboard boxes. It is the physical monument to a failed strategic bet.</p>
+
+<p>Perhaps it is a specialised Rs. 3 Crore multi-axis tube laser. Perhaps it is an automated powder-coating line. Or maybe it is an entire climate-controlled cleanroom that has not seen a human being in eighteen months. Whenever I see one of these silent, idle monuments on a factory floor, I ask the founder the exact same question: what is the story behind that machine?</p>
+
+<p>The founder will usually sigh, look at the floor, and tell a story that goes exactly like this. Two years ago, the leadership team identified a massive, highly promising market opportunity. Maybe it was a sudden boom in electric vehicle components. Maybe it was a government mandate pushing for localised defence manufacturing. Or maybe it was a lucrative export opportunity to European buyers who were looking for a China Plus One supplier. The boardroom buzzed with excitement. The spreadsheets were drawn up. The return on investment looked absolutely spectacular on paper.</p>
+
+<p>Because the opportunity was so obvious, and because the leadership team was terrified that their competitors would beat them to the punch, they decided to move with aggressive speed. They called the bank. They took out a massive term loan. They signed a purchase order for the specialised machinery. They leased an extra 5,000 square feet of floor space. They hired a new production manager and spent a fortune flying the sales team to trade shows in Germany. They bet the business on the opportunity. And then nothing happened.</p>
+
+<p>Two years later, the promised demand never materialised. The European buyers stopped returning emails. The defence contracts were delayed by bureaucracy. The EV market shifted its design parameters, rendering the newly purchased machines obsolete. Now the company is saddled with a crippling monthly EMI payment for a machine that produces zero revenue. The CFO is panicking about cash flow. The sales team is demoralised. And the business is suddenly vulnerable to bankruptcy, all because they confused a strategic idea with a strategic certainty.</p>`,
     },
 
-    // 6 — Introduction screen 2 — Deconstructing the Whiteboard
+    // ── INTRODUCTION SCREEN 2: THE ILLUSION OF THE BOLD LEAP ─────────────────
     {
-      type:    'intro',
-      heading: 'Deconstructing the Whiteboard',
-      body:    `<p>To understand why the meeting failed, we have to look closely at the items on that whiteboard. Every single bullet point represents a massive misunderstanding of how business actually works. Improve quality — quality is not a strategy; it is an operating imperative, the minimum standard required just to be invited to quote. Buy better machines — a machine is a piece of capital equipment, and if your competitive advantage relies entirely on a machine that any of your competitors can buy simply by walking into a bank and signing a loan document, you do not have a competitive advantage. Increase exports — exports is not a strategy, it is a massive, fragmented macro-economy that provides absolutely no clarity on who you are targeting or why they should buy from you. Hire salespeople — sales and marketing are amplification tools; if your core message is that you are exactly the same as the vendor down the street but you promise you work harder, hiring more salespeople simply means you are paying more people to spread a weak message. Every item on that whiteboard was a good thing to do. But none of them were strategy.</p>
-<p>What happened in that meeting is the great illusion of the business world. Smart, capable, hardworking manufacturing teams sit in a room and completely confuse planning with strategy. Planning is figuring out how to do what you already do, but doing it slightly better, faster, or cheaper. Strategy is something entirely different: making explicit, difficult, and highly specific choices about where you will compete and how you will win against ruthless competitors who want to destroy you. You cannot plan your way to higher margins. You cannot budget your way out of commoditisation. To break away from the competition, you have to stop writing lists of internal initiatives and start making strategic choices.</p>`
+      type: 'intro',
+      label: 'Introduction',
+      title: 'The Illusion of the Bold Leap',
+      body: `<p>There is a toxic myth in the business world, perpetuated by magazines, motivational speakers, and startup culture. It is the myth of the Bold Leap. We are taught that great entrepreneurs are gamblers. We are told that to achieve massive growth, a founder must trust their gut, burn the boats, and push all their chips into the centre of the table.</p>
+
+<p>In the software industry, betting the business is relatively cheap. If a software company builds a bad app, they lose a few months of programmer salaries. They can rewrite the code over the weekend and try again. But in the heavy industrial manufacturing sector, betting the business requires concrete, steel, high-voltage electricity, and multi-million-rupee capital expenditure. When a manufacturer makes a bad bet, they cannot just pivot over the weekend. They are stuck with three tons of useless iron bolted to their factory floor.</p>
+
+<p>The core insight of this book is simple, but it will fundamentally change how you deploy capital for the rest of your career: many companies make massive strategic bets based on hope, disguised as strategy. Smart companies do not operate on hope. Smart companies test their strategic ideas to generate prospective data before they commit serious capital.</p>`,
     },
 
-    // 7 — About the Author
+    // ── INTRODUCTION SCREEN 3: FROM EVIDENCE TO PROSPECTIVE DATA ─────────────
     {
-      type:    'about',
-      heading: 'About the Author',
-      body:    `<p>Sudharsan K R is a Business Model &amp; Strategy Advisor working with Indian manufacturing MSMEs in the ₹10–50 Crore band.</p>
-<p>His advisory work focuses on helping manufacturing founders replace generic benchmarking with strategic architecture — building deeply interconnected systems that rivals cannot copy. He works directly alongside promoters, managing directors, and boards on strategic choice, capital commitment, and the transition from promoter-led execution to distributed decision capability.</p>
-<p>Stop Planning, Start Winning is the second book in The Manufacturing Strategy Series, which includes Why Great Manufacturers Stay Invisible, Don't Bet the Business, and Decoding the Rs. 100 Cr Breakthrough.</p>`
+      type: 'intro',
+      label: 'Introduction',
+      title: 'From Evidence to Prospective Data',
+      body: `<p>When a leadership team debates a new strategic direction — like shifting from commercial components to aerospace — the accountants and engineers in the room will naturally demand evidence that the market exists. But demanding evidence is a linguistic trap. Evidence, by definition, is a record of the past. If you are launching a completely new strategic advantage that your company has never offered before, there is no past evidence to look at.</p>
+
+<p>If you wait until an opportunity is so heavily documented and proven that it is generating historical evidence, the market is already saturated. You are too late. You cannot use past evidence to prove a future strategy.</p>
+
+<p>Instead, you must build confidence through prospective data. Prospective data is the information you actively generate today to de-risk your decisions about tomorrow. It is the signal you extract from the market by running small, cheap, rapid experiments. If you think European buyers will pay a 20% premium for your new rapid-prototyping capability, you do not buy the machines and wait to see if you were right. You design a low-cost experiment to see if a buyer will sign a Letter of Intent before the machines even exist. You generate prospective data.</p>
+
+<p>The goal of this book is to teach you how to stop gambling. You will learn how to take the brilliant strategic choices you made in the boardroom and slice them into tiny, testable assumptions — and how to generate the prospective data required to build absolute, unshakable confidence in your strategy before you call the bank.</p>`,
     },
 
-    // 8 — Reader Form
+    // ── READER FORM ──────────────────────────────────────────────────────────
     {
-      type:    'form',
-      heading: 'Before we begin',
-      body:    'Tell Arjun a little about your business. He will share his notes from each chapter based on where you are right now.'
+      type: 'form',
+      title: 'Before we begin',
+      subtitle: 'Your answers personalise the reading experience and shape the strategic reflection at the end.',
+      fields: [
+        {
+          id: 'readerName',
+          label: 'Your name',
+          placeholder: 'How should we address you?',
+          type: 'text',
+        },
+        {
+          id: 'readerRev',
+          label: 'Your current revenue band',
+          type: 'select',
+          options: [
+            { value: 'under10', label: 'Under ₹10 Cr' },
+            { value: '10to25', label: '₹10 Cr – ₹25 Cr' },
+            { value: '25to50', label: '₹25 Cr – ₹50 Cr' },
+            { value: '50plus', label: 'Above ₹50 Cr' },
+          ],
+        },
+        {
+          id: 'readerSector',
+          label: 'Your manufacturing sector',
+          placeholder: 'e.g. Sheet metal, Castings, PCB assembly…',
+          type: 'text',
+        },
+      ],
     },
 
-    // 9 — Arjun Introduction
+    // ── COMPANION INTRO ───────────────────────────────────────────────────────
     {
-      type:    'vikram',
-      heading: 'Meet Arjun Mehta',
-      body:    `<p>Arjun Mehta runs an electronics contract manufacturing unit in Chennai. ₹44 Crore now. Was at ₹28 Crore four years ago — generic PCB assembly for anyone who called, 8% EBITDA margins, procurement buyers treating him like a commodity.</p>
-<p>He made the painful choice to stop taking generic assembly work entirely and focus exclusively on medical device PCB assembly with full end-of-line functional testing. He fired 11 customers in one quarter. Survived a 9-month revenue dip — his worst year on paper, his best decision in hindsight.</p>
-<p>He is re-reading this book alongside you. After each chapter, he will share three notes from his own experience — what he remembers, what he got wrong, what he wishes he had understood earlier.</p>
-<p>He is not a consultant. He is a founder who made the exact choices this book describes — and lived through the consequences of making them.</p>`
-    }
+      type: 'companion',
+      companionInitial: 'R',
+      companionName: 'Rajan Pillai',
+      companionTitle: 'Hydraulic components · Coimbatore',
+      body: `<p>Throughout this book, you will hear from <strong>Rajan Pillai</strong> — a hydraulic components manufacturer from Coimbatore who spent five years paying for a mistake he made in one boardroom meeting.</p>
+
+<p>In 2019, Rajan signed a ₹2.8 Crore loan for a high-pressure testing rig and a precision honing line — based on a trade show conversation and an enthusiastic VP of Sales. The defence contract never came. The machine sat under a tarp for three years. The EMI was ₹4.2 lakhs a month. He calls it his "₹2.8 Crore MBA."</p>
+
+<p>Today, Rajan's business is at ₹38 Crore and growing. He runs an RFQ Stress Test before every major CAPEX. He keeps a monthly Cost of Learning budget. He has not bought a single machine without a signed LOI in four years.</p>
+
+<p>At the end of each chapter, Rajan will share one note from the floor — not advice, not a framework, just what this idea looked like inside a real Coimbatore factory. His perspective is blunt, specific, and earned the hard way.</p>`,
+    },
+
   ]
-};
+}

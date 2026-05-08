@@ -1,86 +1,119 @@
 export default {
-  chapterNum:   7,
-  chapterTitle: 'The Power of Trade-Offs',
-  partName:     'Part Three · Designing Advantage',
-  barTitle:     'Chapter 7: The Power of Trade-Offs',
+  chapterNum: 7,
+  chapterTitle: 'The Fake Door Test',
+  partName: 'Part Three · Thin-Slicing Experiments',
+  barTitle: 'Chapter 7: The Fake Door Test',
+  screens: [
 
-  vikramPerspectives: [
-    `<strong>I fired 11 customers in one quarter.</strong> My CFO thought I had lost my mind. Revenue dropped 23% in month two. I held the line. Nine months later, those 11 customers were replaced by four accounts with three times the margin. The trade-off was real. So was the result.`,
-    `<strong>The ₹2 Crore generic PCB order nearly broke my resolve.</strong> It arrived exactly when my medical pipeline was starting to convert. I said no. My VP of Sales didn't speak to me for a week. Three months later, the medical client placed a ₹6 Crore order that would have been impossible if my SMT lines had been choked with cheap LED board runs.`,
-    `<strong>Incumbent inertia is your protection.</strong> The large EMS conglomerate cannot chase my medical niche without sacrificing the high-volume consumer electronics contracts their board depends on. My painful choice is my moat — and their inability to make the same sacrifice is what keeps it intact.`
+    {
+      type: 'opener',
+      partName: 'Part Three · Thin-Slicing Experiments',
+      chapterNum: 'Chapter 7',
+      chapterTitle: 'The Fake Door Test',
+      intro: 'What happens when the minimum required capital just to produce a single physical sample is Rs. 1 Crore? You do not have to surrender to the Capital Trap. You do not have to buy the machine.',
+    },
+
+    {
+      type: 'content',
+      title: 'The Fake Door Test',
+      body: `<p>In the previous chapter, you learned how to run Simple Market Experiments — how to use your existing factory to brute-force a prototype, or how to outsource a process at a loss to test your pricing power. But what happens when your strategic idea is so massive, so technologically advanced, or so fundamentally new that you cannot even build an Ugly Duckling prototype? What happens when the minimum required capital just to produce a single physical sample is Rs. 1 Crore? If you want to pivot from manual welding to automated laser welding, you cannot fake a laser-welded joint. If you want to launch a massive, proprietary industrial crushing machine, you cannot 3D print a working prototype.</p>
+
+<p>When faced with this wall, manufacturing founders usually throw their hands up, abandon the concept of testing, and revert to their old habits — they sign the Rs. 1 Crore bank loan, cross their fingers, and hope the market is there when the machine is finally turned on. You do not have to surrender to the Capital Trap. You do not have to buy the machine.</p>
+
+<p>To test massive, high-capital strategic pivots, you must use the most powerful, controversial, and psychologically difficult experiment in the business world: the Fake Door Test.</p>`,
+      pushbacks: [
+        {
+          q: `The Fake Door Test sounds like it is designed for product companies. We are a custom job shop. Everything we make is bespoke. How does this apply to us?`,
+          a: `The Fake Door Test applies to any situation where you are considering a major capital investment to access a new type of customer or capability — whether that is a new machine, a new certification, a new facility, or a new product line. For a custom job shop, the Fake Door is not a product catalogue. It is a capability brochure, a spec sheet, or an RFQ submitted against a capability you are proposing to build. The principle is identical: present the capability as if it exists or is arriving soon, and ask the buyer for a commitment before the capital is deployed.`,
+        },
+      ],
+    },
+
+    {
+      type: 'content',
+      title: 'The Logic of the Painted Door',
+      body: `<p>The concept of the Fake Door originated in the software and e-commerce industries, but its underlying logic is perfectly adaptable to heavy industrial manufacturing. Imagine you own a retail store and are debating whether to spend Rs. 50 Lakhs knocking down a brick wall to build a new wing for a new product line. The traditional approach is to take out a loan, knock down the wall, build the wing, stock the shelves, and wait to see if customers walk in.</p>
+
+<p>The Fake Door approach is entirely different. You paint a highly realistic-looking door on the solid brick wall. You put a sign above it: New Premium Product Wing — Open Now. Then you sit back and watch. If a thousand customers walk past the painted door over the next month and absolutely nobody tries to turn the handle, you just saved Rs. 50 Lakhs. The market demand does not exist. You do not need to knock down the wall.</p>
+
+<p>But if fifty customers a day walk up to the painted door, aggressively try to turn the handle, and complain to the manager that the door is locked, you have generated undeniable prospective data. You now have absolute, mathematical confidence that the demand is real. You bring in the sledgehammers tomorrow.</p>`,
+      pushbacks: [
+        {
+          q: `The painted door analogy works in retail where customers walk past. In B2B manufacturing, buyers do not walk past your factory. How do you get them to the painted door?`,
+          a: `In B2B manufacturing, the painted door is not a physical door — it is a spec sheet, a trade show booth, a brochure, a LinkedIn post, or an RFQ submission. You bring the door to the buyer, rather than waiting for the buyer to walk past it. The mechanism changes. The question you are asking does not: will this buyer take an action that involves a transfer of risk — a signature, a deposit, a meeting with their engineering team — based on a capability that does not yet exist? That action is the handle being turned. That is the signal you need.`,
+        },
+      ],
+    },
+
+    {
+      type: 'content',
+      title: 'The Psychology of the Commitment',
+      body: `<p>Founders often confuse a Fake Door Test with a customer survey. They are fundamentally different. If you call a corporate procurement manager and ask whether, if you bought a 12kW fibre laser, they would give you their thick-plate cutting contracts, you are running a survey. The buyer knows you do not have the machine. The buyer knows the risk is zero. Therefore, their answer is completely worthless.</p>
+
+<p>A Fake Door Test requires the buyer to believe the capability already exists, or is definitively arriving on a specific date. You must ask them to make a tangible commitment — a Purchase Order, a signed Letter of Intent, or a credit card pre-authorisation. You only learn the truth when the buyer is forced to part with their money or their signature.</p>`,
+      pushbacks: [
+        {
+          q: `What if the buyer asks to visit the facility to see the machine before they commit? Won't the test collapse the moment they ask for a site visit?`,
+          a: `A request for a site visit is itself prospective data of the highest quality. It means the buyer is seriously interested and is moving toward a commitment. At that point, you have two options. First, delay gracefully: "The equipment is in final commissioning and the floor is not ready for customer visits for another six weeks — but we can schedule one for mid-next month. In the meantime, can we lock in your allocation with a non-binding LOI?" Second, accelerate your capital decision: if multiple serious buyers are requesting site visits, the Fake Door Test has already generated enough signal. The demand is real. Move to capital deployment.`,
+        },
+      ],
+    },
+
+    {
+      type: 'content',
+      title: 'The Fake Door in Different Manufacturing Contexts',
+      body: `<p>An industrial equipment builder that currently builds standard commercial packaging machines wants to move upmarket and build a massive, high-speed, fully automated pharmaceutical bottling line. The R&D and manufacturing cost for the first unit will be Rs. 3 Crore. Their fake door: they spend Rs. 2 Lakhs hiring a top-tier industrial design firm to create hyper-realistic 3D CAD renderings of the new machine, write a flawless, highly technical specification sheet, and print a beautiful, glossy brochure. They take this brochure to a pharmaceutical trade show. When a pharma buyer asks to see the machine, the sales rep says the first production model is currently in final assembly at the plant, and they are taking pre-orders today with a 10% refundable deposit to secure a Q4 delivery slot. If ten buyers try to write a cheque, the Fake Door is a massive success — the company immediately uses those deposits to fund the R&D. If zero buyers are interested, the company scraps the digital brochure and saves Rs. 3 Crore.</p>
+
+<p>A custom aluminium extruder wants to launch a proprietary catalogue of highly complex, architectural-grade window frames. Cutting the steel extrusion dies for the entire 50-piece catalogue will cost Rs. 40 Lakhs. Their fake door: they design all the profiles in CAD, assign them official part numbers, and publish a beautiful New Product Catalogue on their website, complete with pricing and load-bearing technical data — without cutting a single die. When an architect calls to order 2,000 metres of a specific profile, the extruder has generated perfect prospective data. They know exactly which profile is in demand. They immediately order the steel die for only that profile, while leaving the other 49 profiles as digital fictions until someone else tries to order them.</p>`,
+      pushbacks: [
+        {
+          q: `The pharmaceutical bottling example involves telling buyers the machine is "in final assembly" when it does not exist. Isn't that a direct lie?`,
+          a: `"In final assembly" is a phrase that describes the stage of the project — the decision to build has been made, the design is complete, and production is being finalised. It is the same language a property developer uses when selling apartments off-plan. The buyer is not being deceived about what they are buying — they know they are placing a pre-order for a future delivery slot. The 10% deposit is refundable. No money is at risk. The ethical line is crossed only when you take money with no intention of delivering or refunding. A Fake Door Test never crosses that line — you either deliver, or you refund and compensate gracefully.`,
+        },
+      ],
+    },
+
+    {
+      type: 'content',
+      title: 'The Ethics and the Brand Damage Fear',
+      body: `<p>When you propose a Fake Door Test to your leadership team, the boardroom will instantly erupt in panic. Your VP of Sales will claim you are destroying relationships. Your compliance officer will accuse you of fraud. Your engineers will say it is unethical to sell something you do not possess. You must facilitate this conversation with absolute, cold logic. You must explain the difference between fraud and strategic validation.</p>
+
+<p>When your best distributor sends a Purchase Order for valves you do not yet have in inventory and you have to tell him you cannot ship immediately, the graceful exit is simple: "The demand for this new line was so overwhelming that our initial production run completely sold out in pre-orders. We are expanding capacity now, but we cannot ship until Q3. Because we dropped the ball on our inventory forecasting, I am going to void this PO and give you a 10% discount on your next order of our standard valves to apologise."</p>
+
+<p>John gets a discount. He feels like he is dealing with a highly successful company whose products are selling out. His trust in your brand actually increases. And you just generated the prospective data required to safely deploy your Rs. 2 Crore. You are not committing fraud. You are not stealing anyone's money. You are simply testing their willingness to buy, and you will gracefully refund or apologise if they trigger the test. The temporary discomfort of a cancelled PO is infinitely cheaper than the permanent devastation of a bankrupt factory.</p>`,
+      pushbacks: [
+        {
+          q: `What if the compliance officer is right and a buyer decides to take legal action because we presented a product that did not exist?`,
+          a: `A Fake Door Test is not a contract for sale. No money has been collected without consent to a refund process. No delivery date has been contractually guaranteed in a binding agreement. The exposure exists only if you collected full payment with no refund mechanism, made binding delivery guarantees in a signed contract, and then failed to deliver with no remedy offered. None of those conditions apply to a properly designed Fake Door Test. The LOI is non-binding. The deposit is explicitly refundable. The delivery date is presented as provisional. Run the test through your legal counsel before deploying it if you are concerned — but do not let a theoretical legal fear stop you from testing a Rs. 3 Crore capital decision.`,
+        },
+      ],
+    },
+
+    {
+      type: 'exchange',
+      title: 'Your Reflection',
+      subtitle: 'Before moving to Chapter 8, take a moment to record what landed.',
+      prompts: [
+        'Is there a major capital investment your business is currently considering where even building a prototype is too expensive? Design the Fake Door for it — what would the brochure say, who would you show it to, and what commitment would you ask for?',
+        'Think about the last time you or your team said "we cannot test this without building it first." Was that actually true, or was it the Capital Trap speaking?',
+        'Who in your organisation is most likely to call the Fake Door Test dishonest or risky? How will you walk them through the difference between fraud and strategic validation?',
+      ],
+    },
+
+    {
+      type: 'end',
+      chapterNum: 7,
+      totalChapters: 10,
+      chapterTitle: 'The Fake Door Test',
+      nextChapterTitle: 'Learning From Experiments',
+      closingLine: 'You have the full toolkit — RFQ Stress Test, Trojan Horse Interview, Ugly Duckling, Distributor Pre-Sell, and Fake Door. The next chapter teaches you how to read what the market sends back.',
+    },
+
   ],
 
-  screens: [
-    {
-      type:  'opener',
-      part:  'Part Three · Designing Advantage',
-      title: 'The Power of Trade-Offs',
-      intro: 'A strategy is only valid if it explicitly dictates what the company will not do. If your strategy does not force you to look a paying customer in the eye and say no, it is not a strategy.'
-    },
-
-    {
-      type:    'content',
-      heading: 'The Power of Trade-Offs',
-      body:    `<p>If there is one chapter in this book that will make a manufacturing leadership team deeply uncomfortable, it is this one. Up to this point, the strategic process has been additive — we have identified a specific Where to Play and designed a sharp, structural How to Win. It is exciting to define a new capability. It is energising to map out a new market. But there is a dark side to this equation that most manufacturing executives completely ignore, which ultimately causes their entire strategic plan to fail within the first six months.</p>
-<p>A strategy is only valid if it explicitly dictates what the company will not do. This is the concept of strategic trade-offs. It is the absolute heartbeat of competitive advantage. If your newly defined strategy does not force you to look a paying customer in the eye and say no, it is not a strategy. It is just a marketing slogan.</p>`
-    },
-
-    {
-      type:    'content',
-      heading: 'The Physics of Straddling',
-      body:    `<p>Straddling occurs when a company tries to maintain its existing, generic business model while simultaneously trying to bolt on a new, highly specialised strategic position. The leadership team wants the high margins of the premium niche, but they are too terrified to let go of the low-margin volume that currently pays the electricity bills. So they try to do both under one roof. In the physical world of manufacturing, straddling destroys value because you cannot optimise a single factory for two opposing variables. Every operational choice you make to support one strategy actively undermines the other.</p>
-<p>Consider a highly capable CNC machining unit that has decided their new strategic arena is the aerospace defence sector, where their advantage is absolute, uncompromising precision and flawless material traceability. To win here, operators must be meticulous — measuring every dimension twice, logging every tool change, treating a microscopic scratch as a catastrophic failure. Now imagine that on a Tuesday morning, a legacy customer from the commercial agricultural sector needs a massive batch of 50,000 tractor bolts turned. The tolerances are loose, the material is cheap, and the customer demands a rock-bottom price. The Managing Director sees a few idle machines and reasons that the job will cover the overhead for the month. The order is accepted. In that single moment, the entire aerospace strategy collapses. You cannot maintain a paranoid culture of absolute aerospace precision while simultaneously running cheap, high-volume, loose-tolerance tractor bolts in the same facility. The inspection team's rigorous standards begin to slip. And when the high-margin aerospace customer places a critical rush order, the machines are choked with low-margin tractor bolts. The premium customer is told to wait, and the premium brand is destroyed.</p>`
-    },
-
-    {
-      type:    'content',
-      heading: 'The Cost of Refusing to Choose',
-      body:    `<p>The electronics assembly unit that wants to be known as the premier rapid-prototyping facility for medical device startups but refuses to turn away its legacy contracts assembling cheap, high-volume commercial LED lightboards creates an impossible operational reality. Rapid prototyping requires SMT lines to be torn down and set up multiple times a day. Commercial LED assembly requires SMT lines to run uninterrupted for weeks. The production manager spends all day fighting with the sales team, the SMT lines suffer massive downtime due to constant changeovers, and neither the medical startups nor the LED buyers get their parts on time. In every scenario like this, the failure occurs because the leadership team believed they could have it all. Strategy is subtraction. You must subtract the activities that contradict your competitive advantage.</p>`,
-      extra: `<div class="pull-quote"><p>"Strategy is subtraction. You must subtract the activities that contradict your competitive advantage."</p></div>`
-    },
-
-    {
-      type:    'content',
-      heading: 'Why Trade-Offs Create the Ultimate Competitive Moat',
-      body:    `<p>Founders hate trade-offs because they feel like leaving money on the table. But leaving the wrong money on the table is exactly what protects a mid-sized company from being crushed by massive, multi-national competitors. Trade-offs make your strategy mathematically impossible for a giant competitor to copy.</p>
-<p>If a massive, high-volume general manufacturing conglomerate sees your incredible 35% profit margins in your specialised aerospace niche, they have a Rs. 500 Crore balance sheet to attack you with. They can buy the exact same 5-axis DMG Mori machines. They can hire top-tier talent. Should you be terrified? No. Because if that massive conglomerate wants to actually copy your aerospace strategy, they cannot just buy the machines. They have to copy your trade-offs. To achieve your level of precision and speed, the massive conglomerate would have to dramatically slow down their production lines, implement painful low-volume traceability paperwork, and most importantly, tell their existing high-volume, low-margin customers — the customers who generate Rs. 400 Crore of their annual revenue — to go away. Will the massive conglomerate's Board of Directors ever allow the CEO to sacrifice Rs. 400 Crore of predictable revenue just to chase your highly specialised Rs. 30 Crore niche? Absolutely not. This is incumbent inertia — the giant competitor's existing business model actively prevents them from copying you. When you make a painful trade-off, you build a structural moat that well-funded competitors are financially unable to breach.</p>`
-    },
-
-    {
-      type:    'content',
-      heading: 'Enforcing the Trade-Off in Real Time',
-      body:    `<p>The ultimate test of your strategy will not happen during the offsite; it will happen three months later, at the end of the quarter, when sales are slightly down. Your VP of Sales bursts into the boardroom waving a massive Purchase Order: "Boss, I just landed a Rs. 2 Crore order from a commercial tractor manufacturer. It will save our quarter. The margins are tiny, and it requires our machines to run 24/7 for three weeks, but it is guaranteed cash!" You look at the whiteboard. Your documented Where to Play is low-volume rapid prototyping for aerospace.</p>
-<p>The planning response: "Great job! Let's figure out how to squeeze it into the production schedule." This immediately validates that the strategy does not matter when things get tough, and teaches the VP to keep chasing bad revenue. The strategist's response: "That is an incredible sales effort, and I appreciate the hustle. But look at our strategic arena on the whiteboard. Does a massive, low-margin tractor order fit low-volume aerospace prototyping? No. If we take this order, we choke our machines for three weeks. When our target aerospace client calls next week needing a 72-hour turnaround, we will have to tell them no, and we will lose the premium market we are trying to build. We are declining the tractor order. Your job is not to fill the factory with cheap hours; your job is to sell the strategic advantage we built." It will physically hurt to reject that Purchase Order. But the moment you do it, your entire leadership team will realise that the strategy is actually real.</p>`
-    },
-
-    {
-      type:    'content',
-      heading: 'The Founder Pushback',
-      body:    `<p>These are the two most common objections when a leadership team is asked to make a painful strategic trade-off.</p>`,
-      extra: `<div class="pushback">
-  <div class="pb-q">
-    <div class="pb-q-label">Founder Says</div>
-    <div class="pb-q-text">"We don't need to choose! We will just run two different divisions — an Aerospace Division for the high-end work, and a Commercial Division for the cheap volume work. Best of both worlds."</div>
-  </div>
-  <div class="pb-a">
-    <div class="pb-a-label">The Reality</div>
-    <div class="pb-a-text">This is the most dangerous illusion in mid-sized manufacturing. Running two entirely different business models under one roof requires two different operational cultures, two different cost structures, two different sales forces, and two different sets of KPIs. The administrative complexity will skyrocket, overheads will double, and management will spend 80% of their time refereeing fights between the two divisions over shared resources. You are a mid-sized manufacturer, not General Electric. Complexity kills margins. Choose one battle, and win it definitively.</div>
-  </div>
-</div>
-<div class="pushback">
-  <div class="pb-q">
-    <div class="pb-q-label">Founder Says</div>
-    <div class="pb-q-text">"If I say no to this low-margin volume work, my machines will sit idle for three days. I cannot afford that."</div>
-  </div>
-  <div class="pb-a">
-    <div class="pb-a-label">The Reality</div>
-    <div class="pb-a-text">Running a piece of equipment at full capacity on a job that fundamentally contradicts your strategy is actively destroying your brand value. You are burning electricity, wearing down your spindles, and exhausting your operators, all for the privilege of trading rupees with a cheap customer. An idle machine is not a failure; it is preserved, strategic capacity waiting for the exact right customer. Margin is sanity; volume is vanity.</div>
-  </div>
-</div>`
-    },
-
-    { type: 'exchange' },
-
-    { type: 'end', nextTitle: 'Strategy Is a System of Choices' }
-  ]
-};
+  vikramPerspectives: [
+    `The Fake Door Test was the hardest concept in this book for me to accept. I am a Coimbatore engineer. I was raised to show only what I can deliver. The idea of presenting a capability I did not yet have felt dishonest in a way I could not immediately argue against. What changed my mind was one question: is the alternative honest? Buying a Rs. 2 Crore machine on the basis of a trade show conversation and a gut feeling — is that honest? At least the Fake Door asks the market a direct question and waits for an answer. The EMI Vicious Cycle asks nothing and assumes everything.`,
+    `I ran my first Fake Door in 2023. I designed a spec sheet for a high-pressure manifold testing service we did not yet have the equipment to offer. I called it our "Precision Validation Lab" and described it as coming online in Q3. I took the spec sheet to four potential customers. Two asked for pricing. One asked for a site visit. I told him the lab was in final commissioning and we would schedule a visit in six weeks. He said he would wait. That single response told me the demand was real. I signed the equipment lease the following week. The site visit happened on schedule. He became our first customer for that service. The Fake Door cost me the price of a printed spec sheet and four phone calls.`,
+    `The ethics conversation — I had it with my CFO before I ran the test. He used the word fraud. I asked him one question: if the customer triggers the test and we cannot deliver, what do we do? I told him: we void the PO, we apologise, we offer a meaningful discount on their next standard order, and we tell them the demand was so high we ran out of capacity. He sat with that for a moment and said: that is what every sold-out product does. I said: exactly. He approved the test. The compliance officer never found out, and the customer became a repeat buyer within three months.`,
+  ],
+}
