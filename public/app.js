@@ -1139,7 +1139,7 @@ async function submitBookTakeaways(nextScreenIdx) {
     const res = await fetch(RAILWAY_URL + '/api/agent', {
       method: 'POST',
       signal: controller.signal,
-      headers: { 'Content-Type': 'application/json' },
+      headers: { 'Content-Type': 'application/json', 'x-reader-email': localStorage.getItem('readerEmail') || '', 'x-reader-token': localStorage.getItem('readerToken') || '' },
       body: JSON.stringify({
         userName:     user.name,
         userRev:      user.rev,
@@ -1182,20 +1182,11 @@ function typeVikramClosing(text) {
   const msgEl = document.getElementById('vikram-closing-msg');
   const btn   = document.getElementById('vikram-closing-next');
   if (!msgEl) return;
-
-  msgEl.innerHTML = '';
-  let i = 0;
-
-  function type() {
-    if (i < text.length) {
-      msgEl.innerHTML += text[i] === '\n' ? '<br>' : text[i];
-      i++;
-      setTimeout(type, 18);
-    } else {
-      if (btn) btn.style.display = 'inline-flex';
-    }
-  }
-  setTimeout(type, 400);
+  // Render HTML body directly — no typewriter for HTML content
+  msgEl.innerHTML = text;
+  setTimeout(() => {
+    if (btn) btn.style.display = 'inline-flex';
+  }, 400);
 }
 function checkInputs() {
   const filled = ['t1', 't2', 't3'].every(
