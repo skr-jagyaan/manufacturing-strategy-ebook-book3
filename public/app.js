@@ -933,7 +933,7 @@ function go(from, to) {
       setTimeout(loadDiagnosisData, 600);
     }
     // If vikram screen, trigger typewriter
-    if (screens[to]?.type === 'vikram') {
+    if (screens[to]?.type === 'vikram' || screens[to]?.type === 'companion') {
       setTimeout(typeVikramIntro, 300);
     }
     // If vikram closing screen, trigger typewriter
