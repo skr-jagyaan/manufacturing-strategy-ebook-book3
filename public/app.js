@@ -1130,7 +1130,12 @@ async function submitBookTakeaways(nextScreenIdx) {
   document.getElementById('loading-state').classList.add('show');
 
   const user = getUser();
-  let perspectives = currentChapter.vikramPerspectives;
+  let perspectives = currentChapter.vikramPerspectives || [
+
+    '<strong>The tarp taught me more than any seminar.</strong> Three years of EMI payments for a machine that made nothing — that is the real cost of skipping the test.',
+    '<strong>The LOI is not bureaucracy.</strong> It is the moment the market tells you the truth before you spend the money.',
+    '<strong>Go run your experiment.</strong> The market is waiting to tell you what it wants — all you have to do is ask it the right question.'
+  ];
 
   try {
     const controller = new AbortController();
@@ -1210,7 +1215,12 @@ async function submitTakeaways(nextScreenIdx) {
   document.getElementById('loading-state').classList.add('show');
 
   const user = getUser();
-  let perspectives = currentChapter.vikramPerspectives;
+  let perspectives = currentChapter.vikramPerspectives || [
+
+    '<strong>The tarp taught me more than any seminar.</strong> Three years of EMI payments for a machine that made nothing — that is the real cost of skipping the test.',
+    '<strong>The LOI is not bureaucracy.</strong> It is the moment the market tells you the truth before you spend the money.',
+    '<strong>Go run your experiment.</strong> The market is waiting to tell you what it wants — all you have to do is ask it the right question.'
+  ];
 
   try {
     const controller = new AbortController();
