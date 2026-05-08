@@ -116,11 +116,12 @@ app.post('/api/agent', requireAuth, async (req, res) => {
 
     const data  = await response.json();
     const raw   = data.candidates?.[0]?.content?.parts?.[0]?.text || '';
+    console.error('Gemini raw response:', JSON.stringify(data).substring(0, 500));
     const clean = raw.replace(/```json|```/g, '').trim();
 
     let parsed;
     try { parsed = JSON.parse(clean); }
-    catch (e) { return res.status(502).json({ error: 'Agent response malformed.' }); }
+    catch (e) { console.error('JSON parse error:', e.message, 'raw:', raw.substring(0, 200)); return res.status(502).json({ error: 'Agent response malformed.' }); }
 
     if (!parsed.perspectives || parsed.perspectives.length !== 3)
       return res.status(502).json({ error: 'Agent response incomplete.' });
