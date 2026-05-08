@@ -3,9 +3,9 @@ export default {
 
     // ── CONCLUSION ────────────────────────────────────────────────────────────
     {
-      type: 'conclusion',
+      type: 'backmatter-prose',
       label: 'Conclusion',
-      title: 'Building the Machine That Makes the Decisions',
+      heading: 'Building the Machine That Makes the Decisions',
       body: `<p>You have learned how to stop writing Laudable Lists. In Book One, you diagnosed why technically excellent businesses remain invisible to the market and to premium pricing — because they have never made an explicit choice about who they are for. In Book Two, you learned the fatal difference between operational planning and strategic choice, and you built a Strategic Choice Cascade that positions you on a specific playing field with a structural, uncopyable advantage. And in this book, you now possess the elite capability to slice your most terrifying assumptions into cheap, rapid experiments, generating the prospective data required to deploy capital safely.</p>
 
 <p>The manufacturing businesses that will dominate the next decade are not the ones with the oldest heritage. They are not the ones that fight the hardest over a 2% discount on standard commodities. They are the companies that treat strategy as a rigorous, testable science. They are the founders who stop acting like gamblers and start acting like architects. They choose a narrow arena. They engineer an uncopyable advantage. They ruthlessly test their logic in the open market. And when the math proves they are right, they strike with overwhelming, terrifying capital confidence.</p>
@@ -15,10 +15,10 @@ export default {
 
     // ── CONTINUE THE JOURNEY ─────────────────────────────────────────────────
     {
-      type: 'next-book',
+      type: 'backmatter-prose',
       label: 'Continue the Journey',
       bookNumber: 'Book Four',
-      title: 'Decoding the Rs. 100 Cr Breakthrough',
+      heading: 'Decoding the Rs. 100 Cr Breakthrough',
       subtitle: 'Strategic Architecture for Indian Manufacturing — From Growth Stage to Market Leadership',
       body: `<p>You now know how to stop writing Laudable Lists — Book One. You know the fatal difference between operational planning and strategic choice — Book Two. And you now possess the elite capability to slice your most terrifying assumptions into cheap, rapid experiments, generating the prospective data required to deploy capital safely — this book. But how do you bring all of these distinct weapons together and see what the integrated architecture looks like inside the companies that have already crossed Rs. 100 Crore?</p>
 
@@ -53,7 +53,7 @@ export default {
 
     // ── COMPANION CLOSING ─────────────────────────────────────────────────────
     {
-      type: 'companion-closing',
+      type: 'vikram-closing',
       companionInitial: 'R',
       companionName: 'Rajan Pillai',
       companionTitle: 'Hydraulic components · Coimbatore',
@@ -66,6 +66,13 @@ export default {
 <p>I have not bought a single machine in four years without a signed LOI already on my desk. My business is at Rs. 38 Crore and growing. The honing cell that started it all is running at 94% utilisation. The rig that nearly broke us was sold for scrap in 2023.</p>
 
 <p>Go run your experiment. The market is waiting to tell you the truth. All you have to do is ask it the right question.</p>`,
+    },
+
+    {
+      type: 'working-with-author',
+      heading: 'Work With Sudharsan',
+      body: `<p>If this book changed how you think about capital and strategy, Sudharsan works directly with manufacturing founders in the Rs. 10–50 Crore band. The engagement is a structured 90-day strategic advisory — diagnosis, strategic choice, and a validated 90-day execution plan.</p>
+<p>To explore working together, write to <strong>info@sudharsankr.co.in</strong> with the subject line: <em>Strategic Advisory Inquiry</em>. Include your revenue band, your sector, and the one capital decision you are currently facing. Sudharsan reads every email personally.</p>`,
     },
 
   ]
