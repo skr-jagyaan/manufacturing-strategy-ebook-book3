@@ -97,6 +97,7 @@ app.post('/api/agent', requireAuth, async (req, res) => {
   const prompt = isBookLevel
     ? buildBookLevelPrompt(userName, userSector, revLabel, takeaways)
     : buildChapterPrompt(userName, userSector, revLabel, chapter, chapterTitle, takeaways);
+  console.error('Prompt length:', prompt.length, 'chars');
 
   try {
     const response = await fetch(`${GEMINI_URL}?key=${CONFIG.GEMINI_KEY}`, {
