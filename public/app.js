@@ -359,9 +359,9 @@ function renderScreen(screen, idx, total) {
       return `
         <div class="screen-body center">
           <div class="opener-wrap">
-            <div class="opener-part">${screen.part}</div>
+            <div class="opener-part">${screen.partName || screen.part}</div>
             <div class="opener-num">Chapter ${currentChapter?.chapterNum || ''}</div>
-            <div class="opener-title">${screen.title}</div>
+            <div class="opener-title">${screen.chapterTitle || screen.title}</div>
             <div class="opener-line"></div>
             <div class="opener-intro">${screen.intro}</div>
           </div>
@@ -378,7 +378,7 @@ function renderScreen(screen, idx, total) {
       return `
         <div class="screen-body">
           <div class="content-wrap">
-            <div class="section-title">${screen.heading}</div>
+            <div class="section-title">${screen.title || screen.heading}</div>
             <div class="prose">${screen.body}</div>
             ${screen.extra || ''}
           </div>
@@ -460,7 +460,7 @@ function renderScreen(screen, idx, total) {
         : nextNum <= TOTAL_CHAPTERS
         ? `<button class="btn btn-primary" style="width:100%;justify-content:center;padding:13px"
              onclick="goToChapter(${nextNum})">
-             Chapter ${nextNum}: ${screen.nextTitle} →
+             Chapter ${nextNum}: ${screen.nextChapterTitle || screen.nextTitle} →
            </button>`
         : `<button class="btn btn-primary" style="width:100%;justify-content:center;padding:13px"
              onclick="goToDiagnosis()">
@@ -494,7 +494,7 @@ function renderScreen(screen, idx, total) {
         <div class="screen-body">
           <div class="content-wrap">
             <div class="bm-label">${screen.label || ''}</div>
-            <div class="section-title">${screen.heading}</div>
+            <div class="section-title">${screen.title || screen.heading}</div>
             <div class="prose">${screen.body}</div>
           </div>
         </div>
