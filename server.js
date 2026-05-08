@@ -97,7 +97,7 @@ app.post('/api/agent', requireAuth, async (req, res) => {
   const prompt = isBookLevel
     ? buildBookLevelPrompt(userName, userSector, revLabel, takeaways)
     : buildChapterPrompt(userName, userSector, revLabel, chapter, chapterTitle, takeaways);
-  console.error('Prompt length:', prompt.length, 'chars');
+
 
   try {
     const response = await fetch(`${GEMINI_URL}?key=${CONFIG.GEMINI_KEY}`, {
@@ -215,21 +215,12 @@ Their Chapter ${chapter} ("${chapterTitle}") takeaways:
 
 Share YOUR 3 notes from this chapter in Rajan's voice:
 - First person only — never "you should"
-- Reference your story: the tarp, the 36-month EMI, the DRDO false signal, the RFQ Stress Test that changed the company, Coimbatore, hydraulic components, the LOI rule you now enforce
-- Reference their sector and revenue naturally where it fits
-- Bold opening + one sentence from your experience
-- Max 2 sentences per note
-- Founder talking to founder — direct, specific, battle-scarred, no generic advice
-- Short sentences, Coimbatore directness, earned not taught
+- STRICT: <strong>bold 4-6 word opener</strong> then ONE short sentence. Hard limit: 25 words per note total.
+- Reference your story naturally: tarp, EMI, DRDO, RFQ Stress Test, LOI rule, Coimbatore
+- Founder to founder — direct, battle-scarred, no generic advice
 
-Return ONLY valid JSON:
-{
-  "perspectives": [
-    "note 1 with <strong>bold opening</strong> then one sentence",
-    "note 2 with <strong>bold opening</strong> then one sentence",
-    "note 3 with <strong>bold opening</strong> then one sentence"
-  ]
-}`;
+Return ONLY valid JSON, no markdown fences:
+{"perspectives":["<strong>bold opener</strong> one sentence.","<strong>bold opener</strong> one sentence.","<strong>bold opener</strong> one sentence."]}`;
 }
 
 function buildBookLevelPrompt(userName, userSector, revLabel, takeaways) {
@@ -242,21 +233,14 @@ Their 3 book-level takeaways:
 2. ${takeaways[1]}
 3. ${takeaways[2]}
 
-Your 3 final notes — what the whole book means to you looking back, what you wish you had known before buying the rig, what you carry into every capital decision now:
-- Same voice: first person, specific, bold opening + one sentence
-- Slightly warmer — this is a farewell, but still direct
-- Reference the tarp, the 36-month EMI, the LOI rule, the moment the RFQ Stress Test changed everything
-- Reference their sector and revenue naturally
-- End with the sense that the hard work starts now, not when the book ends
+Your 3 final notes — farewell, specific, earned:
+- First person only
+- STRICT: <strong>bold 4-6 word opener</strong> then ONE short sentence. Hard limit: 25 words per note total.
+- Reference: tarp, EMI, LOI rule, RFQ Stress Test
+- Warm but direct
 
-Return ONLY valid JSON:
-{
-  "perspectives": [
-    "note 1 with <strong>bold opening</strong> then one sentence",
-    "note 2 with <strong>bold opening</strong> then one sentence",
-    "note 3 with <strong>bold opening</strong> then one sentence"
-  ]
-}`;
+Return ONLY valid JSON, no markdown fences:
+{"perspectives":["<strong>bold opener</strong> one sentence.","<strong>bold opener</strong> one sentence.","<strong>bold opener</strong> one sentence."]}`;
 }
 
 function buildDiagnosisPrompt(userName, userSector, revLabel, allTakeaways, bookTakeaways) {
