@@ -72,7 +72,8 @@ export default {
       authorTitle: 'Business Model & Strategy Advisor',
     },
 
-    // ── WHO SHOULD READ THIS BOOK ────────────────────────────────────────────    {
+    // ── WHO SHOULD READ THIS BOOK ────────────────────────────────────────────
+    {
       type: 'who',
       heading: 'Who Should Read This Book',
       body: `<p>This book is the third in the Manufacturing Strategy Series. It is designed for a specific kind of leader at a specific kind of moment — the moment before a major capital decision is made.</p>
