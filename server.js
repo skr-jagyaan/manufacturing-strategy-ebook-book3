@@ -108,7 +108,11 @@ app.post('/api/agent', requireAuth, async (req, res) => {
       })
     });
 
-    if (!response.ok) return res.status(502).json({ error: 'Agent unavailable.' });
+    if (!response.ok) {
+      const errBody = await response.text();
+      console.error('Gemini agent error:', response.status, errBody);
+      return res.status(502).json({ error: 'Agent unavailable.' });
+    }
 
     const data  = await response.json();
     const raw   = data.candidates?.[0]?.content?.parts?.[0]?.text || '';
@@ -154,7 +158,11 @@ app.post('/api/diagnosis', requireAuth, async (req, res) => {
       })
     });
 
-    if (!response.ok) return res.status(502).json({ error: 'Diagnosis unavailable.' });
+    if (!response.ok) {
+      const errBody = await response.text();
+      console.error('Gemini diagnosis error:', response.status, errBody);
+      return res.status(502).json({ error: 'Diagnosis unavailable.' });
+    }
 
     const data  = await response.json();
     const raw   = data.candidates?.[0]?.content?.parts?.[0]?.text || '';
