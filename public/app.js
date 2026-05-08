@@ -630,6 +630,7 @@ function renderScreen(screen, idx, total) {
     case 'about':
     case 'form':
     case 'vikram':
+    case 'companion':
       return renderOnboardingScreen(screen, idx, total, prevBtn);
 
     case 'diagnosis-loading':
