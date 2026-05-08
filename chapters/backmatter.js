@@ -40,19 +40,10 @@ export default {
 
     // ── DIAGNOSIS TEASER ──────────────────────────────────────────────────────
     {
-      type: 'diagnosis-teaser',
-      label: 'Your Strategic Diagnosis',
-      title: 'Your Personalised Strategic Diagnosis',
-      body: `<p>Based on everything you have read, the takeaways you have recorded, and the reflections you have written at the end of each chapter, Sudharsan has built a personalised strategic diagnosis for your business.</p>
-
-<p>The diagnosis identifies the single most dangerous untested assumption currently sitting in your capital pipeline, the experiment design most appropriate for your sector and revenue band, and the one strategic move that will most accelerate your path toward the Rs. 100 Crore threshold.</p>
-
-<p>This is not a generic summary. It is built from your specific inputs — your sector, your revenue band, and the strategic challenges you surfaced as you read. It takes approximately three minutes to generate.</p>`,
-      ctaLabel: 'Get My Diagnosis',
+      type: 'book-exchange',
     },
 
-    // ── COMPANION CLOSING ─────────────────────────────────────────────────────
-    {
+        {
       type: 'vikram-closing',
       companionInitial: 'R',
       companionName: 'Rajan Pillai',
@@ -68,6 +59,19 @@ export default {
 <p>Go run your experiment. The market is waiting to tell you the truth. All you have to do is ask it the right question.</p>`,
     },
 
+    {
+      type: 'diagnosis-teaser',
+      label: 'Your Strategic Diagnosis',
+      title: 'Your Personalised Strategic Diagnosis',
+      body: `<p>Based on everything you have read, the takeaways you have recorded, and the reflections you have written at the end of each chapter, Sudharsan has built a personalised strategic diagnosis for your business.</p>
+
+<p>The diagnosis identifies the single most dangerous untested assumption currently sitting in your capital pipeline, the experiment design most appropriate for your sector and revenue band, and the one strategic move that will most accelerate your path toward the Rs. 100 Crore threshold.</p>
+
+<p>This is not a generic summary. It is built from your specific inputs — your sector, your revenue band, and the strategic challenges you surfaced as you read. It takes approximately three minutes to generate.</p>`,
+      ctaLabel: 'Get My Diagnosis',
+    },
+
+    // ── COMPANION CLOSING ─────────────────────────────────────────────────────
     {
       type: 'working-with-author',
       heading: 'Work With Sudharsan',
