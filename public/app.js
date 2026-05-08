@@ -851,6 +851,7 @@ function renderOnboardingScreen(screen, idx, total, prevBtn) {
         </div>`;
 
     case 'vikram':
+    case 'companion':
       return `
         <div class="screen-body center">
           <div class="vikram-wrap">
