@@ -74,9 +74,20 @@ export default {
     // ── COMPANION CLOSING ─────────────────────────────────────────────────────
     {
       type: 'working-with-author',
-      heading: 'Work With Sudharsan',
-      body: `<p>If this book changed how you think about capital and strategy, Sudharsan works directly with manufacturing founders in the Rs. 10–50 Crore band. The engagement is a structured 90-day strategic advisory — diagnosis, strategic choice, and a validated 90-day execution plan.</p>
-<p>To explore working together, write to <strong>info@sudharsankr.co.in</strong> with the subject line: <em>Strategic Advisory Inquiry</em>. Include your revenue band, your sector, and the one capital decision you are currently facing. Sudharsan reads every email personally.</p>`,
+      heading: 'Working with the Author',
+      body: `<p>This book is a distillation of what I have observed across manufacturing businesses navigating the ₹10 to ₹50 Crore growth band. The frameworks here — the WWHTBT logic test, the Deal Killer isolation, the Thin-Slicing methodology — are not academic constructs. They are the diagnostic tools I use in direct engagement with founders, boards, and leadership teams facing high-stakes decisions about where to compete and how to invest.</p>
+
+<p>If the thinking in this book has surfaced a question your leadership team has not yet been able to answer clearly — about strategic position, capital allocation, or the structural constraints limiting your next phase of growth — that question is where the advisory work begins.</p>
+
+<p><strong>What the Advisory Engagement Is</strong></p>
+
+<p>I work directly alongside promoters, managing directors, and boards of engineering-led manufacturing businesses. The engagement is not a consulting report delivered at the end of a process — it is active involvement in the real decisions the business is navigating. The starting point is a single diagnostic conversation to identify the primary structural constraint limiting the business's ability to scale.</p>
+
+<p>Five diagnostic conversations are available each week. Active advisory engagements are limited each quarter by the nature of the work.</p>
+
+<p><strong>sudharsan@sudharsankr.co.in</strong> &nbsp;·&nbsp; sudharsankr.co.in</p>
+
+<p><em>"The factory is already built. The question is whether the strategy running it is strong enough for what comes next."</em></p>`,
     },
 
   ]
