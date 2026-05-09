@@ -402,6 +402,15 @@ html, body {
   margin-bottom: 8px;
 }
 
+.chapter-closing-line {
+  font: 400 0.9375rem/1.6 'Inter', sans-serif;
+  color: var(--ink-2);
+  font-style: italic;
+  text-align: center;
+  padding: 16px 0 8px;
+  border-top: 0.5px solid var(--rule);
+  margin-top: 8px;
+}
 .pb-a-text {
   font: 400 0.9375rem/1.65 'Inter', sans-serif;
   color: var(--ink);

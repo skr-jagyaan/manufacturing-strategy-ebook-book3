@@ -389,6 +389,14 @@ function renderScreen(screen, idx, total) {
           <div class="content-wrap">
             <div class="section-title">${screen.title || screen.heading}</div>
             <div class="prose">${screen.body}</div>
+            ${(screen.pushbacks || []).map(pb => `
+              <div class="pushback">
+                <div class="pb-q">
+                  <div class="pb-q-label">Founder Says</div>
+                  <div class="pb-q-text">"${pb.q}"</div>
+                </div>
+                <div class="pb-a">${pb.a}</div>
+              </div>`).join('')}
             ${screen.extra || ''}
           </div>
         </div>
@@ -408,17 +416,17 @@ function renderScreen(screen, idx, total) {
             <div id="reader-inputs">
               <div class="input-row">
                 <div class="input-num">1</div>
-                <textarea class="takeaway-input" id="t1" placeholder="First takeaway…" rows="2"
+                <textarea class="takeaway-input" id="t1" placeholder="${screen.prompts?.[0] || 'First takeaway\u2026'}" rows="2"
                   oninput="this.style.height='auto';this.style.height=Math.min(this.scrollHeight,120)+'px';checkInputs()"></textarea>
               </div>
               <div class="input-row">
                 <div class="input-num">2</div>
-                <textarea class="takeaway-input" id="t2" placeholder="Second takeaway…" rows="2"
+                <textarea class="takeaway-input" id="t2" placeholder="${screen.prompts?.[1] || 'Second takeaway\u2026'}" rows="2"
                   oninput="this.style.height='auto';this.style.height=Math.min(this.scrollHeight,120)+'px';checkInputs()"></textarea>
               </div>
               <div class="input-row">
                 <div class="input-num">3</div>
-                <textarea class="takeaway-input" id="t3" placeholder="Third takeaway…" rows="2"
+                <textarea class="takeaway-input" id="t3" placeholder="${screen.prompts?.[2] || 'Third takeaway\u2026'}" rows="2"
                   oninput="this.style.height='auto';this.style.height=Math.min(this.scrollHeight,120)+'px';checkInputs()"></textarea>
               </div>
               <div class="submit-row">
@@ -488,6 +496,7 @@ function renderScreen(screen, idx, total) {
               <div class="author-note-text">At the end of this book, your notes from every chapter will be reviewed. You will receive a personalised strategic diagnosis for your business.</div>
               <div class="author-note-sig">— Sudharsan K R</div>
             </div>
+            ${screen.closingLine ? `<div class="chapter-closing-line">${screen.closingLine}</div>` : ''}
             ${nextBtn}
           </div>
         </div>
